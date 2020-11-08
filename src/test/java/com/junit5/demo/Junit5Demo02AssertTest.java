@@ -12,14 +12,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Junit5Demo02AssertTest {
     @Test
-    public void addTest(){
+    public void addTest() throws InterruptedException{
         int result =Caculator.add(4,2);
         //Caculator.add(4,2);
         System.out.println(result);
         assertEquals(6,result);
     }
     @Test
-    public void subTractTest(){
+    public void subTractTest() throws InterruptedException{
         int result =Caculator.subtract(4,2);
         System.out.println(result);
         assertEquals(2,result);
