@@ -45,6 +45,9 @@ public class Junit5Demo06Allure {
     public void subTractTest() throws InterruptedException{
         int result =Caculator.subtract(4,2);
         System.out.println(result);
+        Allure.addAttachment("脚本名称", "减法测试用例！");
+        Allure.addAttachment("pic","image/png",this.getClass().getResourceAsStream("/pic01.png"),".png");
+
         assertEquals(2,result);
     }
 
