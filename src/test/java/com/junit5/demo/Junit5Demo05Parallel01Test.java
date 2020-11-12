@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class Junit5Demo05Parallel01Test {
 
-    @RepeatedTest(10)
+    @RepeatedTest(40)
     public void countTest() throws InterruptedException{
         int result =Caculator.count(1);
         System.out.println(result);

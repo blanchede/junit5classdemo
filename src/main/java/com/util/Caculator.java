@@ -29,16 +29,28 @@ public class Caculator {
         return result;
     }*/
 
-    //累加(处理多线程问题，方法二：java.util.concurrent.atomic:包提供了的AtomicInteger
+
+    //累加(处理多线程问题，方法二：java.util.concurrent.atomic:包提供了的AtomicInteger(仍然有问题）
     public static int count(int x) throws InterruptedException{
         //给i赋值
         i.set(result);
-        Thread.sleep(500);
+        Thread.sleep(200);
         //获取加x后的值，先加x
         result = i.addAndGet(x);
         return result;
     }
 
+/*
+    //累加(处理多线程问题，方法二：java.util.concurrent.atomic:包提供了的AtomicInteger
+    public static int count(int x) throws InterruptedException{
+        //给i赋值
+        i.set(0);
+        Thread.sleep(500);
+        //获取加x后的值，先加x
+        //result = i.addAndGet(x);
+        return i.addAndGet(x);
+    }
+*/
     //减法
     public static int subtract(int x,int y) throws InterruptedException{
         result = x-y;
